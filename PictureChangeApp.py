@@ -1,3 +1,5 @@
+# Phil Minard
+# With help from Miguel Lourenco
 import os
 import tkinter as tk
 import tkinter.ttk as ttk
@@ -28,8 +30,8 @@ class PictureChangeApp:
     
     def button_next_pressed(self):
         """pressing the button to change between the images"""
-        puppy_image = 'C:\\location\\of\\Desktop\\your\\first image\\2\\to_display.jpg'
-        Phil_Pic = 'C:\\location\\of\\Desktop\\your\\first image\\2\\to_display.jpg'
+        puppy_image = 'C:\\location\\of\\Desktop\\your\\first image\\2\\display.jpg'
+        Phil_Pic = 'C:\\location\\of\\Desktop\\your\\first image\\2\\display.jpg'
         label = self.builder.get_object('labelPicture')
 
         if self.is_on:
@@ -38,6 +40,7 @@ class PictureChangeApp:
             print("Resize of on_image complete")
             image_on = ImageTk.PhotoImage(on_image)
             label.configure(image=image_on)
+            label.image = image_on
             self.is_on = False
             print(self.is_on)
 
@@ -47,9 +50,10 @@ class PictureChangeApp:
             print("Resize of off_image complete")
             image_off = ImageTk.PhotoImage(off_image)
             label.configure(image=image_off)
+            label.image = image_off
             self.is_on = True
             print(self.is_on)
-        label.labelImage.update()
+        # label.labelImage.update()
         label.pack()
 
     def run(self):
