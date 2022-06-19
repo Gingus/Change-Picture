@@ -1,10 +1,10 @@
 # Phil Minard
 # With help from Miguel Lourenco
-import os
+# import os
 import tkinter as tk
-import tkinter.ttk as ttk
+# import tkinter.ttk as ttk
 import pygubu
-import sys
+# import sys
 import os
 from PIL import Image, ImageTk
 
